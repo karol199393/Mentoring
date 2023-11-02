@@ -1,0 +1,14 @@
+Zad.1
+Pętle są fundamentalnymi strukturami programistycznymi, które pozwalają na wykonywanie określonych operacji wielokrotnie, dopóki spełniony jest określony warunek. Istnieją różne rodzaje pętli, takie jak for, while, do...while, a każdy z nich ma swoje unikalne zastosowanie.
+Pętla for:
+Składnia: for (inicjalizacja; warunek; inkrementacja) {...}
+Praktyczne zastosowanie: Pętla for jest często używana do iteracji przez kolekcje, takie jak tablice lub listy, gdzie znana jest liczba elementów do przeglądania. Może być również używana do wykonywania określonej liczby iteracji.
+Pętla while:
+Składnia: while (warunek) {...}
+Praktyczne zastosowanie: Pętla while jest używana, gdy warunek określający zakończenie pętli nie jest znany na początku lub gdy pętla powinna być wykonana co najmniej raz, bez względu na warunek.
+Pętla do...while:
+Składnia: do {...} while (warunek);
+Praktyczne zastosowanie: Pętla do...while jest podobna do while, ale zawsze wykonuje się co najmniej raz, ponieważ warunek jest sprawdzany po wykonaniu bloku kodu.
+
+Zad.2
+W pierwszej pętli jest postinkrementacja a w drugiej preinkrementacja.
