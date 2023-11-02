@@ -1,0 +1,152 @@
+Zad1
+Tablice (inaczej nazywane również listami) są jednymi z podstawowych struktur danych w programowaniu. Są to zbiory elementów o określonej długości, które mogą być przechowywane w jednej zmiennej. Sens wykorzystywania tablic polega na efektywnym przechowywaniu i zarządzaniu danymi. Oto kilka przykładów, jak można wykorzystywać tablice w programowaniu:
+Przechowywanie kolekcji danych: Tablice pozwalają na przechowywanie wielu elementów, takich jak liczby, napisy lub obiekty, w jednej zmiennej. Na przykład, można użyć tablicy do przechowywania listy ocen uczniów.
+oceny=[5,3,3]
+Iterowanie po elementach: Tablice umożliwiają łatwe iterowanie po wszystkich elementach. Możesz użyć pętli, takiej jak pętla for, do przeglądania i przetwarzania każdego elementu.
+for ocena in oceny:
+    print(ocena)
+Indeksowanie: Tablice pozwalają na dostęp do poszczególnych elementów za pomocą indeksów. Indeksy zaczynają się od zera, więc pierwszy element ma indeks 0.
+pierwsza_ocena = oceny[0]  # Pobieranie pierwszej oceny
+W języku Java można wykonać te same operacje na tablicach, które zostały opisane w poprzednim odpowiedzi dotyczącej Pythona. Oto odpowiedniki tych operacji w kontekście języka Java:
+Modyfikacja danych w tablicy:
+int[] oceny = {5, 4, 3, 5, 2};
+oceny[1] = 5;  // Aktualizowanie drugiej oceny na 5
+Dodawanie i usuwanie elementów:
+Aby dodać nowy element na koniec tablicy w języku Java, musisz utworzyć nową tablicę o większym rozmiarze i skopiować zawartość oryginalnej tablicy do nowej tablicy. Oto przykład:
+
+int[] oceny = {5, 4, 3, 5, 2};
+int nowaOcena = 4;
+int[] noweOceny = new int[oceny.length + 1];
+
+for (int i = 0; i < oceny.length; i++) {
+    noweOceny[i] = oceny[i];
+}
+
+noweOceny[oceny.length] = nowaOcena;
+oceny = noweOceny;
+Usuwanie ostatniego elementu z tablicy w języku Java również wymaga stworzenia nowej tablicy z mniejszym rozmiarem i skopiowania zawartości oryginalnej tablicy bez ostatniego elementu.
+
+Sortowanie i przeszukiwanie:
+W języku Java, można użyć różnych algorytmów sortowania, takich jak Quicksort lub Mergesort, do sortowania tablicy. Można również użyć klasy Arrays, która dostarcza metodę sort(). Aby przeszukać tablicę w celu znalezienia określonej wartości, można użyć pętli for lub klasy Arrays, która zawiera metodę binarySearch().
+
+Przykład sortowania:
+int[] oceny = {5, 4, 3, 5, 2};
+Arrays.sort(oceny);  // Sortowanie ocen
+Przykład przeszukiwania:
+int[] oceny = {5, 4, 3, 5, 2};
+int szukanaOcena = 5;
+int indeks = Arrays.binarySearch(oceny, szukanaOcena);  // Wyszukiwanie oceny 5
+Przechowywanie danych wielowymiarowych:
+W języku Java można tworzyć tablice wielowymiarowe, takie jak tablice dwuwymiarowe, trójwymiarowe itp., aby przechowywać dane w formie macierzy lub innych złożonych struktur danych. Oto przykład tablicy dwuwymiarowej:
+
+int[][] macierz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+W zależności od konkretnego zadania, w języku Java można wykonywać różne operacje na tablicach, takie jak sortowanie, przeszukiwanie, modyfikacja i wiele innych, w celu przechowywania, przetwarzania i zarządzania danymi.
+
+Zad.2
+Jedna zmienna w pamięci vs. 10 zmiennych w pamięci:
+Tablica 10 elementów int przechowuje 10 liczb całkowitych w jednym obszarze pamięci.
+10 zmiennych typu int to 10 niezależnych zmiennych, z każdą przechowywaną w osobnym obszarze pamięci.
+Indeksowanie:
+W przypadku tablicy, dostęp do poszczególnych elementów odbywa się za pomocą indeksów (np. tablica[0], tablica[1], itd.).
+W przypadku 10 zmiennych typu int, każda zmienna ma swoją unikalną nazwę, a dostęp do nich odbywa się poprzez te nazwy (np. zmienna1, zmienna2, itd.).
+Przechowywanie w pamięci:
+Tablice są bardziej efektywne pod względem zużycia pamięci, ponieważ przechowują elementy w jednym bloku pamięci.
+10 zmiennych typu int zajmuje więcej pamięci, ponieważ każda zmienna ma swoją własną przestrzeń w pamięci.
+Przetwarzanie danych:
+Tablice umożliwiają łatwiejsze przetwarzanie danych w pętlach i operacje na wielu elementach jednocześnie, co jest przydatne w programowaniu.
+10 zmiennych typu int wymagają wydajniejszego zarządzania, jeśli chcemy wykonać operacje na wszystkich zmiennych, na przykład w pętlach, to kod może stać się bardziej skomplikowany.
+Ogólnie rzecz biorąc, wybór między tablicą a osobnymi zmiennymi zależy od konkretnego zadania. Jeśli potrzebujesz przechowywać wiele powiązanych wartości, to tablica jest często bardziej praktyczna i efektywna. Natomiast jeśli potrzebujesz przechowywać niezależne wartości, z którymi będziesz pracować indywidualnie, to osobne zmienne są bardziej odpowiednie.
+
+Zad.3
+W języku Java tablice są strukturami jednorodnymi, co oznacza, że wszystkie elementy w tablicy muszą być tego samego typu. Nie można bezpośrednio utworzyć tablicy, która zawiera różne typy danych, takie jak int i short, w jednej tablicy.
+Jednakże istnieje sposób, aby osiągnąć podobny efekt, używając obiektów typu Object, które są nadrzędnym typem dla wszystkich innych typów w Javie. Możesz stworzyć tablicę Object i umieścić w niej różne typy obiektów, takie jak Integer (odpowiednik int) i Short. Oto przykład:
+
+Zad.4
+Drugie odwołanie odwołuje się do elementu -1 który nie istnieje.
+Czwarte odwołanie nadpisuje intem do elementu typu String.
+
+Zad.5
+Null albo puste
+
+Zad.6
+Występuje wtedy kiedy przekroczymy wielkość tablicy i wyjdziemy poza jej zakres.
+
+Zad.7
+Pierwszy sposób na iterowanie po tablicy, czyli używanie values.length, jest zdecydowanie bezpieczniejszy i bardziej elastyczny niż drugi sposób, który zakłada sztywną długość tablicy (taką jak 6). Oto dlaczego:
+Bezpieczeństwo:
+W pierwszym przypadku używasz values.length, co oznacza, że pętla będzie działać poprawnie niezależnie od rzeczywistej liczby elementów w tablicy. Jeśli później zmienisz rozmiar tablicy (dodasz lub usuniesz elementy), nie musisz zmieniać ręcznie warunku pętli. Jest to bardziej bezpieczne i eliminuje ryzyko błędów.
+Elastyczność:
+Drugi sposób zakłada, że tablica ma zawsze dokładnie 6 elementów. Jeśli w przyszłości zmienisz liczbę elementów w tablicy, pętla może stać się niepoprawna. Warto stosować bardziej ogólny i elastyczny kod, który działa dla tablic o różnych rozmiarach.
+Efektywność:
+W obu przypadkach efektywność działania pętli jest podobna, ponieważ w obu przypadkach iterujesz przez tę samą liczbę elementów w tablicy. Nie ma znaczącej różnicy w wydajności między tymi dwoma podejściami.
+Podsumowując, pierwszy sposób jest bezpieczniejszy i bardziej elastyczny, więc zaleca się używanie values.length lub ogólnego warunku, który automatycznie dostosowuje się do rozmiaru tablicy, jeśli tylko to możliwe.
+
+Zad.12
+Korzystanie z obiektu typu List w języku Java ma kilka korzyści w porównaniu do korzystania z zwykłej tablicy elementów. Oto niektóre z tych korzyści:
+Dynamiczny rozmiar:
+Listy, takie jak ArrayList, pozwalają na dynamiczne zmienianie rozmiaru, co oznacza, że możesz dodawać i usuwać elementy bez konieczności tworzenia nowej tablicy. W przypadku zwykłej tablicy rozmiar musi być określony na etapie tworzenia, co jest niewygodne, gdy liczba elementów zmienia się w czasie.
+Łatwiejsze dodawanie i usuwanie elementów:
+Listy udostępniają metody takie jak add() i remove(), co sprawia, że dodawanie i usuwanie elementów jest prostsze i bardziej elastyczne niż w przypadku zwykłej tablicy.
+Przydatne metody:
+Listy oferują wiele przydatnych metod do operacji na elementach, takie jak sortowanie, odwracanie, wyszukiwanie, filtrowanie itp.
+Bezpieczeństwo typów:
+Listy mogą przechowywać tylko elementy danego typu (np. List<Integer>), co zapewnia bezpieczeństwo typów i eliminuje błędy typów w trakcie kompilacji.
+Bardziej elastyczne:
+Listy pozwalają na przechowywanie elementów różnych rozmiarów i różnych typów w jednej strukturze danych.
+Obsługa kolekcji:
+Listy są często używane w kontekście kolekcji, co ułatwia pracę z wieloma danymi jednocześnie, takimi jak iterowanie, mapowanie, filtrowanie itp.
+Możliwość korzystania z interfejsów:
+Możesz korzystać z interfejsów, takich jak List, co pozwala na łatwą zamianę konkretnych implementacji listy, na przykład między ArrayList, LinkedList, a innymi.
+W praktyce stosuje się obiekty typu List znacznie częściej niż zwykłe tablice ze względu na ich elastyczność, wygodę i funkcjonalność. Jednak zależy to od konkretnego zadania i wymagań, ponieważ w niektórych przypadkach zwykła tablica może być bardziej odpowiednia, jeśli rozmiar jest znany i nie zmienia się w trakcie działania programu.
+
+Zad.14
+ArrayList i LinkedList to dwie różne implementacje interfejsu List w języku Java. Oto główne różnice między nimi:
+Struktura danych:
+ArrayList to tablica dynamiczna, co oznacza, że przechowuje elementy w formie tablicy o zmiennym rozmiarze. Ma stały dostęp do elementów na podstawie indeksu.
+LinkedList to lista dwukierunkowa, w której każdy element jest połączony z poprzednim i następnym elementem. Ma stały dostęp tylko do pierwszego i ostatniego elementu, a dostęp do innych elementów wymaga przeglądania listy od początku lub końca.
+Wydajność wstawiania i usuwania:
+ArrayList jest bardziej efektywne w przypadku częstego dostępu do elementów po indeksie, ale wstawianie i usuwanie elementów w środku listy może być kosztowne w przypadku dużych list, ponieważ wymaga przesunięcia elementów.
+LinkedList jest bardziej efektywne w przypadku częstego wstawiania i usuwania elementów w środku listy, ponieważ nie wymaga przesuwania elementów, ale dostęp do elementów po indeksie jest mniej efektywny.
+Zajmowane miejsce w pamięci:
+ArrayList zajmuje więcej pamięci ze względu na to, że przechowuje elementy w tablicy o stałym rozmiarze i zwykle ma kilka dodatkowych miejsc w tablicy dla ewentualnych dodatkowych elementów.
+LinkedList zajmuje mniej pamięci ze względu na strukturę listy dwukierunkowej, ale ma nieco większy narzut związań między elementami.
+Operacje czasowe:
+Dostęp do elementu po indeksie w ArrayList jest szybki (O(1)).
+Wstawianie i usuwanie elementów w środku listy w ArrayList jest kosztowne (O(n), gdzie n to liczba elementów w liście).
+Dostęp do elementu po indeksie w LinkedList jest wolniejszy (O(n)), ponieważ wymaga przeglądania od początku lub końca.
+Wstawianie i usuwanie elementów w środku listy w LinkedList jest szybkie (O(1)).
+Użycie:
+ArrayList jest częściej używane, gdy potrzebujemy często dostępu do elementów po indeksie lub kiedy lista ma stały rozmiar.
+LinkedList jest bardziej odpowiednie, gdy potrzebujemy często wstawiać lub usuwać elementy w środku listy.
+Ostateczny wybór między ArrayList a LinkedList zależy od konkretnej sytuacji i wymagań projektu. Często obie te implementacje można stosować z powodzeniem, ale należy wybrać tę, która najlepiej spełnia konkretne potrzeby i optymalizuje wydajność operacji wykonywanych na liście.
+Zad.19
+Obiekty typu Set w Javie są przydatne w wielu sytuacjach, zwłaszcza gdy potrzebujesz przechowywać unikalne elementy i wykonywać operacje na zbiorach. Oto praktyczne zastosowania obiektów typu Set:
+Usuwanie duplikatów:
+Jeśli masz listę elementów, w której mogą wystąpić duplikaty, możesz przekształcić tę listę w Set, a duplikaty zostaną automatycznie usunięte. Działa to na zasadzie przechowywania tylko unikalnych elementów.
+Weryfikacja zawierania:
+Obiekt Set jest użyteczny do sprawdzania, czy dany element znajduje się w zbiorze. Możesz użyć metody contains() do sprawdzania, czy element jest obecny.
+Przechowywanie unikalnych kluczy:
+W kontekście przechowywania unikalnych kluczy lub identyfikatorów, Set jest przydatny, ponieważ gwarantuje unikalność elementów.
+Operacje na zbiorach:
+Możesz wykonywać operacje na zbiorach, takie jak przecięcie, różnica, suma, itp., między dwoma lub więcej zbiorami. To przydatne w analizie danych, przetwarzaniu i algorytmach.
+Przechowywanie zbiorów wartości:
+W niektórych przypadkach możesz użyć Set do przechowywania zbiorów wartości, na przykład zbiorów punktów, słów kluczowych lub innych wartości, które muszą być unikalne.
+Zabezpieczenie przed duplikatami w kolekcjach:
+Możesz użyć obiektów Set do filtrowania i usuwania duplikatów z innych kolekcji, takich jak listy lub tablice.
+Implementacja algorytmów wyszukiwania:
+W wielu algorytmach i operacjach wyszukiwania, Set jest używany do przechowywania unikalnych elementów w trakcie przetwarzania danych.
+Kalkulacje statystyczne:
+Obiekty Set są przydatne w analizie danych, gdzie unikalność jest kluczowa, na przykład w obliczeniach statystycznych.
+Ogólnie rzecz biorąc, Set jest przydatnym narzędziem w Javie do zarządzania unikalnymi zbiorami elementów i jest szeroko stosowane w różnych dziedzinach programowania.
+
+Zad.21 to samo co Zad.14
+
+Zad.22
+nne implementacje interfejsu Set:
+TreeSet: Implementacja Set oparta na drzewie, która przechowuje elementy w porządku naturalnym lub przy użyciu dostarczonego komparatora.
+LinkedHashSet: Implementacja Set, która zachowuje kolejność w jakiej elementy były dodawane. Przechowuje elementy w porządku dodawania.
+ConcurrentSkipListSet: Implementacja Set oparta na drzewie, zoptymalizowana pod kątem współbieżności, co pozwala na bezpieczny dostęp wielu wątków do zbioru.
+EnumSet: Implementacja Set specjalnie dostosowana do kluczy typu enum. Jest wydajna i bezpieczna w kontekście typów wyliczeniowych.
+BitSet: Implementacja Set przeznaczona do przechowywania bitów, co jest przydatne w niektórych algorytmach i operacjach na bitach.
+CopyOnWriteArraySet: Implementacja Set zoptymalizowana pod kątem współbieżności, w której operacje modyfikujące tworzą kopię oryginalnego zbioru, co zapewnia bezpieczeństwo wątkowe.
+Te różne implementacje Map i Set pozwalają programistom dostosować zachowanie tych struktur danych do konkretnych zastosowań i wymagań, takich jak wydajność, współbieżność, porządek elementów itp.
