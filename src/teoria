@@ -1,0 +1,42 @@
+Zad.1
+Jednakże, dziedziczenie jest jednym z kluczowych koncepcji programowania obiektowego i jest często związane z zasadami SOLID, szczególnie "O" w SOLID, co oznacza "Open/Closed Principle" (Zasada Otwarte/Zamknięte). Ta zasada mówi o tym, że klasa powinna być otwarta na rozszerzenie, ale zamknięta na modyfikacje.Dziedziczenie w programowaniu obiektowym pozwala na tworzenie nowych klas (klas pochodnych) na podstawie istniejących klas (klasy bazowej) i rozszerzanie ich funkcjonalności. Dziedziczenie jest sposobem na zastosowanie zasady Otwarte/Zamknięte, ponieważ można rozszerzać funkcjonalność istniejących klas, nie modyfikując ich kodu źródłowego.
+Zasady SOLID, zwłaszcza zasada Otwarte/Zamknięte (Open/Closed Principle), są istotne w kontekście dziedziczenia i tworzenia hierarchii klas w programowaniu obiektowym. Dziedziczenie pozwala na dostosowywanie istniejących klas do nowych wymagań poprzez tworzenie klas pochodnych, zachowując przy tym zasady SOLID, takie jak zasada pojedynczej odpowiedzialności (Single Responsibility Principle) i zasada zależności (Dependency Inversion Principle).
+Is this conversation helpful so far?
+
+Zad.3
+
+Car bmw = new Car(4, 4, "Johnny"); // Dodane słowo kluczowe "new" do tworzenia obiektu
+ protected void honk() { // Zmiana "private" na "protected" aby metoda była dostępna dla klas w jednym packegu
+
+Zad.5
+a.
+Klasy finalne są to klasy w językach programowania, które zostały oznaczone modyfikatorem "final". Oznacza to, że klasy te nie mogą być dziedziczone przez inne klasy. Ogranicza to możliwości dziedziczenia i rozszerzania takich klas przez programistę. Oto kilka kluczowych cech klas finalnych i jakie ograniczenia nakładają na programistę:
+Brak dziedziczenia: Klasa finalna nie może być rozszerzana przez inne klasy. Programista nie może tworzyć podklas, które dziedziczyłyby po klasie finalnej.
+Bezpośrednie zabezpieczenie: Klasa finalna jest bezpośrednio zabezpieczona przed zmianami w kodzie. Oznacza to, że programista nie może zmieniać zachowań ani dodawać nowych funkcji do klasy finalnej poprzez dziedziczenie i nadpisywanie metod.
+Optymalizacja: Używanie klas finalnych może pomóc w optymalizacji kodu, ponieważ kompilator może lepiej zoptymalizować kod klasy finalnej, wiedząc, że nie będzie ona dziedziczona ani zmieniana.
+Bezpieczeństwo: Klasy finalne mogą być używane do ograniczenia możliwości nadmiernego dziedziczenia, co może prowadzić do problemów związanych z bezpieczeństwem i konserwacją.
+Uproszczona hierarchia klas: Używanie klas finalnych może prowadzić do prostszej hierarchii klas, co ułatwia zrozumienie i zarządzanie kodem.
+Ogólnie rzecz biorąc, stosowanie klas finalnych ma sens w sytuacjach, w których programista chce jasno określić, że dana klasa nie jest przeznaczona do dziedziczenia lub nie powinna być modyfikowana. Jednak nadużywanie klas finalnych może prowadzić do problemów z rozszerzalnością i testowalnością kodu, dlatego powinny być używane z umiarem i zrozumieniem konsekwencji ich zastosowania.
+
+b.
+Pola finalne (ang. "final fields") są to zmienne w językach programowania, które zostały oznaczone modyfikatorem "final". Oznacza to, że po przypisaniu wartości do takiego pola, nie można go już zmienić. Ograniczają one programistę, ponieważ nakładają pewne restrykcje na manipulację danymi. Oto kilka kluczowych cech pól finalnych i jakie ograniczenia kładą na programistę:
+Brak modyfikacji: Po zainicjowaniu pola finalnego, jego wartość nie może być już zmieniana. Oznacza to, że programista musi przypisać mu wartość podczas inicjalizacji i nie będzie mógł później zmieniać tej wartości.
+Bezpieczeństwo i niezmienność: Pola finalne są przydatne w kontekście niezmienności (ang. "immutability"). Dzięki nim można stworzyć obiekty, których stan nie zmienia się po ich utworzeniu, co może pomóc w unikaniu błędów i zapewniać bezpieczeństwo w wielowątkowym środowisku.
+Stałe i stałe klasowe: W językach programowania, takich jak Java, pola finalne często używane są do definiowania stałych (ang. "constants") lub stałych klasowych, które mają z góry ustaloną wartość i nie mogą być zmieniane.
+Kompilator: Użycie pól finalnych może pomóc kompilatorowi w optymalizacji kodu, ponieważ kompilator może wykorzystać pewność, że pole nie ulegnie zmianie i dokonać odpowiednich uproszczeń w generowanym kodzie.
+Ogólnie rzecz biorąc, pola finalne są przydatne w sytuacjach, w których programista chce zapewnić, że dana wartość nie będzie modyfikowana po jej inicjalizacji. Pomagają one w tworzeniu niezmienności i zapewnianiu bezpieczeństwa danych. Jednak programista musi być ostrożny przy ich używaniu, ponieważ nie można zmienić wartości takiego pola po inicjalizacji, co może prowadzić do problemów w sytuacjach, gdzie zmiana danych jest niezbędna.
+
+c.Metody finalne (ang. "final methods") to metody w językach programowania, które zostały oznaczone modyfikatorem "final". Oznacza to, że metody te nie mogą być nadpisywane (przesłaniane) w klasach dziedziczących. Ograniczają one programistę, ponieważ nie pozwala się na zmianę ich implementacji w podklasach. Oto kilka kluczowych cech metod finalnych i jakie ograniczenia kładą na programistę:
+
+Brak nadpisywania: Metoda finalna nie może być nadpisywana (przesłaniana) w podklasach. Programista nie ma możliwości zmiany implementacji takiej metody w klasach dziedziczących.
+Bezpośrednie zabezpieczenie: Metody finalne są bezpośrednio zabezpieczone przed zmianami w zachowaniach lub implementacji. To oznacza, że programista nie może wprowadzać niestandardowych zachowań w klasach dziedziczących poprzez nadpisanie metody finalnej.
+Zachowanie spójności: Metody finalne mogą pomóc w zachowaniu spójności w hierarchii dziedziczenia, co może być ważne w kontekście zachowań podstawowych, które nie powinny ulegać zmianie.
+Bezpieczeństwo i optymalizacja: Stosowanie metod finalnych może pomóc w optymalizacji kodu, ponieważ kompilator może wykorzystać pewność, że taka metoda nie zostanie zmieniona, co pozwala na bardziej efektywne generowanie kodu.
+Ogólnie rzecz biorąc, stosowanie metod finalnych ma sens w sytuacjach, w których programista chce zagwarantować, że pewne zachowania nie ulegną zmianie w klasach dziedziczących. Jest to przydatne w przypadku podstawowych operacji lub funkcji, które nie powinny być zmieniane. Jednak nadmiernie stosowanie metod finalnych może ograniczać elastyczność i rozszerzalność kodu, dlatego powinny być używane z rozwagą i tylko wtedy, gdy istnieje pewność, że dana metoda nie powinna być modyfikowana w klasach dziedziczących.
+
+
+
+
+
+
+
