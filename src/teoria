@@ -1,0 +1,59 @@
+Zad 1
+Enkapsulacja to jeden z fundamentalnych konceptów w programowaniu, szczególnie w obiektowym programowaniu. Polega ona na ukrywaniu wewnętrznych szczegółów i stanu obiektów oraz udostępnianiu jedynie odpowiednich interfejsów, które pozwalają na operowanie na tych obiektach. Enkapsulacja ma na celu zabezpieczenie danych obiektu przed niepożądanymi modyfikacjami i umożliwienie kontrolowanego dostępu do tych danych.
+W językach programowania, takich jak Java, C++, czy Python, enkapsulacja jest osiągana poprzez definiowanie pól (zmiennych) jako prywatne (private) i udostępnianie publicznych metod (getterów i setterów) do odczytywania i zmieniania tych pól. Dzięki temu, kod zewnętrzny nie ma bezpośredniego dostępu do pól obiektu, co chroni je przed niepożądanymi zmianami i pozwala na kontrolę nad tym, jakie operacje są wykonywane na tych polach.
+Enkapsulacja ma kilka ważnych zalet:
+Ukrywanie szczegółów implementacji: Pozwala na zmiany wewnątrz obiektu bez konieczności zmiany kodu, który korzysta z tego obiektu. Dzięki temu zmiana wewnętrznej struktury obiektu nie wpływa na pozostałą część programu.
+Kontrola dostępu: Umożliwia kontrolowanie, kto i w jaki sposób może zmieniać stan obiektu. Możesz ustawić ograniczenia i walidacje w metodach setterów.
+Bezpieczeństwo: Chroni dane przed nieuprawnionym dostępem i zabezpiecza je przed przypadkowymi błędami w programie.
+Ułatwia debugowanie: Enkapsulacja ułatwia śledzenie błędów, ponieważ skupia zmienne i operacje na nich w jednym miejscu (w obiekcie), co ułatwia identyfikację i rozwiązywanie problemów.
+Enkapsulację warto stosować zawsze, gdy tworzysz obiekty w programie, aby zapewnić poprawne i bezpieczne działanie kodu. Działa ona również jako podstawa dla innych zasad obiektowego programowania, takich jak dziedziczenie i polimorfizm, i jest kluczowa dla tworzenia modułowego i łatwo zarządzalnego kodu.
+
+Zad.3
+Można utworzyć gettery i settery i do nich się odwołać.
+
+Zad.4
+Modyfikatory dostępu (public, private i protected) są używane do określenia zakresu widoczności i dostępu do pól, metod i klas w programowaniu obiektowym. Oto ich główne różnice:
+public:
+Element oznaczony jako public jest dostępny z każdego miejsca w programie, zarówno z wewnętrznych jak i zewnętrznych klas.
+Jest to najbardziej otwarty modyfikator dostępu i oznacza, że dany element jest widoczny dla każdego, kto korzysta z klasy.
+Oznaczenie metody jako public oznacza, że można ją wywoływać z dowolnego miejsca w programie.
+private:
+Element oznaczony jako private jest dostępny tylko w obrębie klasy, w której został zdefiniowany. Nie jest widoczny z zewnątrz klasy.
+Modyfikator private zapewnia pełną enkapsulację i chroni pole lub metodę przed dostępem z innych klas.
+Używa się go, aby ukryć wewnętrzne szczegóły implementacji klasy i zapewnić kontrolowany dostęp do jej pól i metod za pomocą getterów i setterów.
+protected:
+Element oznaczony jako protected jest dostępny w obrębie klasy, w której został zdefiniowany, oraz w klasach dziedziczących (podklasach) tej klasy.
+Modyfikator protected umożliwia dostęp do elementów w hierarchii dziedziczenia, co pozwala na rozszerzanie zachowań klasy bazowej w klasach pochodnych.
+W językach takich jak Java, protected oznacza, że pola i metody są dostępne tylko w obrębie tego samego pakietu, a także w klasach dziedziczących.
+Podsumowując, modyfikatory dostępu public, private i protected różnią się zakresem widoczności i dostępności do elementów klas. public jest najbardziej dostępny, private jest najbardziej ograniczony, a protected umożliwia dostęp w obrębie hierarchii dziedziczenia. Wybór odpowiedniego modyfikatora zależy od potrzeb projektu i poziomu kontroli nad dostępem do pól i metod.
+Zad.5
+Tak,zostanie dostarczony domyślny konstruktor
+Zad.6
+Jeśli jawnie nie zdefiniujesz konstruktora w klasie, to w wielu językach programowania zostanie dostarczony domyślny konstruktor, który jest niewidoczny i nie zawiera żadnych instrukcji. Ten konstruktor jest tworzony automatycznie przez kompilator w wielu językach, jeśli nie zdefiniujesz własnego konstruktora. Domyślny konstruktor ma zazwyczaj puste ciało, co oznacza, że nie inicjalizuje on żadnych pól ani nie wykonuje żadnych innych operacji.
+Zad.7
+Ja preferuje drugi sposób ponieważ wiem że odwołuje się do tego samego jakoś przejrzystrsze jest to dla mnie.
+
+Zad.8
+Kompozycja jest jednym z podstawowych mechanizmów budowania relacji między obiektami w programowaniu obiektowym, w którym jedna klasa (w tym przypadku Company) zawiera lub korzysta z innych klas (w tym przypadku Employee) jako swoich składników.
+Company zawiera tablicę obiektów Employee i zarządza nimi. Employee jest składnikiem Company, a Company jest odpowiedzialna za zarządzanie pracownikami. To jest przykład kompozycji.
+Klasa Company ma pole employees, które jest tablicą obiektów Employee. To oznacza, że każda instancja klasy Company zawiera lub komponuje wiele obiektów Employee.
+W konstruktorze klasy Company tworzysz obiekty Employee i przypisujesz je do tablicy employees. To oznacza, że Company tworzy i zarządza obiektami Employee.
+Klasa Company kontroluje swoje obiekty Employee, na przykład może zarządzać nimi, wyświetlać ich dane lub wykonywać operacje na nich.
+To jest przykład kompozycji, gdzie jedna klasa (Company) składa się z innych klas (Employee) i zarządza nimi. Kompozycja jest często używana do tworzenia hierarchii obiektów, gdzie jedna klasa zawiera inne klasy, co pomaga w organizacji i zarządzaniu złożonymi strukturami danych w programie.
+
+Zad.10
+będzie miało modyfikator dostępu domyślny, który jest widoczny tylko w obrębie tego samego pakietu. Oznacza to, że pole będzie dostępne tylko dla innych klas znajdujących się w tym samym pakiecie, ale będzie ukryte przed klasami spoza tego pakietu.
+
+Zad.11
+
+Nazwy pakietów w programowaniu pełnią ważną rolę w organizacji i zarządzaniu kodem. Warto dobierać nazwy pakietów starannie, aby pomóc zrozumieć strukturę projektu i uniknąć konfliktów nazw. Oto kilka zaleceń dotyczących umieszczania informacji w nazwach pakietów:
+1,Nazwa Projekut,2.Funckjonalność,3.Grupowanie,4.Struktura hierarchii,5.Unikatowość,6.Zrozumiałę i opisowe
+
+Zad.12
+Konstruktor kopiujący to specjalna metoda w programowaniu obiektowym, która służy do tworzenia nowego obiektu, który jest kopią innego obiektu. Konstruktor kopiujący jest używany do zaimplementowania mechanizmu kopiowania (klonowania) obiektów, co pozwala na tworzenie nowych obiektów na podstawie istniejących, zachowując ich stan. Jest to szczególnie przydatne, gdy chcemy utworzyć głęboką kopię obiektu, czyli kopię, która zawiera kopie również obiektów zagnieżdżonych.
+
+
+
+
+
+
