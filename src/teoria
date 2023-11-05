@@ -1,0 +1,73 @@
+Zad.1
+Polimorfizm:
+Polimorfizm to jedna z kluczowych koncepcji obiektowo zorientowanego programowania (OOP). Oznacza on zdolność różnych obiektów do odpowiedzi na te same komunikaty lub metody w sposób specyficzny dla swojego typu. Istnieją dwa główne rodzaje polimorfizmu: polimorfizm kompilacji (zwany także statycznym) i polimorfizm wykonania (zwany także dynamicznym).
+Polimorfizm kompilacji (statyczny): To rodzaj polimorfizmu, który występuje na etapie kompilacji. Polega na przypisaniu referencji do obiektów różnych klas do ogólniejszej referencji. Przykładowo, możesz mieć referencję do obiektu klasy bazowej, która wskazuje na obiekt klasy pochodnej, a następnie wywołać metody na tej referencji, które zostaną zinterpretowane na podstawie faktycznego typu obiektu. To pozwala na tworzenie bardziej ogólnych algorytmów, które mogą działać na różnych typach obiektów.
+Polimorfizm wykonania (dynamiczny): To rodzaj polimorfizmu, który zachodzi podczas działania programu. Działa na podstawie rzeczywistego typu obiektu, niezależnie od typu referencji. To oznacza, że metoda wywoływana jest zgodnie z typem obiektu, na którym jest wywoływana, co umożliwia wykonywanie różnych zachowań w zależności od faktycznego typu obiektu.
+Klasa abstrakcyjna:
+Klasa abstrakcyjna to klasa, która nie może być bezpośrednio instancjonowana (nie można tworzyć obiektów tej klasy), ale może zawierać deklaracje metod (często abstrakcyjnych), które muszą być zaimplementowane w klasach pochodnych. Klasa abstrakcyjna służy jako szablon dla innych klas, które dziedziczą z niej i implementują jej metody abstrakcyjne. W języku Java, aby zadeklarować klasę jako abstrakcyjną, używa się słowa kluczowego "abstract".
+Przykład:
+public abstract class Figura {
+    public abstract double obliczPole(); // Metoda abstrakcyjna
+}
+Interfejs (różnica względem klasy abstrakcyjnej):
+Interfejs jest podobny do klasy abstrakcyjnej w sensie, że deklaruje metody, które muszą być implementowane przez klasy pochodne. Jednak istnieją istotne różnice między nimi:
+Klasy abstrakcyjne mogą zawierać zarówno metody abstrakcyjne, jak i konkretne metody, które mają domyślną implementację. Interfejsy natomiast deklarują jedynie sygnatury metod (metody bez ciała) i nie mają domyślnych implementacji.
+Klasa może dziedziczyć tylko po jednej klasie abstrakcyjnej, ale może implementować wiele interfejsów. Dlatego interfejsy umożliwiają bardziej elastyczne zarządzanie współdzieleniem kodu między różnymi klasami.
+Klasy abstrakcyjne mogą zawierać pola (zmienne instancyjne), a interfejsy mogą zawierać jedynie stałe (publiczne, statyczne, finalne zmienne).
+Klasa abstrakcyjna jest używana do tworzenia hierarchii klas, podczas gdy interfejsy są używane do określania zestawu metod, które różne klasy powinny implementować, niezależnie od ich hierarchii dziedziczenia.
+Przykład interfejsu:
+
+public interface Obliczenia {
+    double obliczPole();
+    double obliczObwod();
+}
+Podsumowując, zarówno klasy abstrakcyjne, jak i interfejsy są używane w programowaniu obiektowym do tworzenia kontraktów, ale różnią się w swoim działaniu i zastosowaniu. Klasy abstrakcyjne dostarczają pewną implementację, podczas gdy interfejsy definiują jedynie sygnatury metod, które klasy implementujące muszą zaimplementować.
+
+Zad.3
+Klasy anonimowe (ang. "anonymous classes") są specjalnym rodzajem klas w języku Java, które pozwalają na definiowanie i tworzenie instancji klasy w jednym miejscu, bez konieczności nadawania jej nazwy. Klasy anonimowe są często używane do definiowania i tworzenia obiektów implementujących interfejsy lub dziedziczących z klas abstrakcyjnych bez konieczności tworzenia osobnej klasy implementującej te interfejsy lub dziedziczącej po tych klasach.
+
+Główne cechy klas anonimowych:
+Brak nazwy: Klasy anonimowe nie mają nadanej nazwy. Są definiowane bezpośrednio w miejscu, gdzie są używane.
+Implementacja interfejsów lub dziedziczenie z klas abstrakcyjnych: Klasy anonimowe są często wykorzystywane do implementacji interfejsów lub dziedziczenia z klas abstrakcyjnych.
+Definicja w miejscu użycia: Są tworzone bezpośrednio w miejscu, gdzie są potrzebne, co może być wygodne, gdy potrzebujemy jednorazowej implementacji interfejsu lub klasy bazowej.
+
+Zad.6
+public interface OSComponent {
+    void allocate();
+}
+
+public interface Process {
+    void execute();
+}
+
+public class WindowsProcess implements OSComponent, Process {
+    @Override
+    public void allocate() {
+        // implementacja alokacji na systemie Windows
+    }
+
+    @Override
+    public void execute() {
+        // implementacja wykonywania procesu na systemie Windows
+    }
+}
+
+public class LinuxProcess implements OSComponent, Process {
+    @Override
+    public void allocate() {
+        // implementacja alokacji na systemie Linux
+    }
+
+    @Override
+    public void execute() {
+        // implementacja wykonywania procesu na systemie Linux
+    }
+}
+
+Zad.7
+Słowo kluczowe super w Javie jest używane w klasie potomnej (dziedziczącej) do odwoływania się do składowych (pól lub metod) klasy nadrzędnej (bazowej). Służy ono do rozróżnienia między składowymi klasy nadrzędnej i klasą potomną o tych samych nazwach. Oto kilka sytuacji, w których możesz używać słowa kluczowego super:
+Odwoływanie się do pól klasy nadrzędnej,Wywoływanie konstruktora klasy nadrzędnej,Wywoływanie metod z klasy nadrzędnej.
+Zad.8
+Termin "metody wirtualne" jest często używany w kontekście języków programowania, takich jak C++ lub C#, a niekoniecznie w języku Java. Wirtualne metody są związane z mechanizmem dziedziczenia i polimorfizmu.
+W językach, które obsługują metody wirtualne, takie jak C++ i C#, metoda wirtualna jest specjalnym rodzajem metody, która jest dziedziczona przez klasy pochodne (klasy potomne), a metoda wirtualna w klasie bazowej może być nadpisana (zaimplementowana na nowo) przez klasy pochodne. Mechanizm ten umożliwia wywoływanie metody z klasy pochodnej, a faktyczna implementacja tej metody zostaje rozpoznana w czasie działania programu na podstawie rzeczywistego typu obiektu.
+W języku Java nie ma koncepcji "metod wirtualnych" w tym sensie, ponieważ wszystkie metody są domyślnie wirtualne. Oznacza to, że w Javie, jeśli metoda jest zadeklarowana w klasie bazowej i jest nadpisywana w klasie pochodnej, to wywołanie tej metody z obiektu klasy pochodnej spowoduje wykonanie implementacji z klasy pochodnej, niezależnie od rzeczywistego typu obiektu. W Javie nie musisz używać specjalnego modyfikatora (np. virtual jak w C++ lub override jak w C#) do oznaczenia metody jako wirtualnej. To jest domyślna i standardowa cecha języka Java.
